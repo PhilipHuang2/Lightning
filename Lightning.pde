@@ -13,19 +13,26 @@ void setup()
 }
 
 void draw(){
-  line(startX,startY,endX,startY);
-  endX = endX + (int)((Math.random()*10)+1);
-  endY = endY + (int)((Math.random()*10)-5);
+  endX = endX + (int)((Math.random()*10)+5);
+  endY = endY + (int)((Math.random()*20)-10);
+  line(startX,startY,endX,endY);
   startX = endX;
   startY = endY;
+  //reset lightning
+  if(endX>600){
+    startX = 0;
+    startY = 300;
+    endX = 5;
+    endY = 300;
+    size(600, 600);
+    background(0);
+  }
 
   // problem: for each line startY = end Y
 }
 
 void mousePressed()
 {
-   size(600,600);
-   background(0);
 
 }
 
