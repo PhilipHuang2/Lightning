@@ -23,7 +23,15 @@ void draw(){
   line(0,300,400,300);
 
   endX = endX + (int)((Math.random()*10)+5);
-  endY = endY + (int)((Math.random()*20)-10);
+  endY = endY + (int)((Math.random()*40)-20);
+
+  if ( endY < 100){
+    endY = 100;
+  }
+  if(endY > 300){
+    endY = 300;
+  }
+
   line(startX,startY,endX,endY);
   startX = endX;
   startY = endY;
