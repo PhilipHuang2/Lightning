@@ -27,6 +27,19 @@ void draw(){
   stroke(0,153,76);
   strokeWeight(10);
   point(charX,charY);
+  if(keyCode == UP) {
+      charY--;     
+  }
+  if(keyCode == DOWN) {
+      charY++;     
+  }  
+  if(keyCode == LEFT) {
+      charX--;     
+  }  
+  if(keyCode == RIGHT) {
+      charX++;     
+  }
+
 
   //Lightning
   stroke(12,125,200);
@@ -56,6 +69,10 @@ void draw(){
   }
 stroke(12,125,200);
   // problem: for each line startY = end Y
+}
+
+void keyReleased() {
+  point(charX,charY);
 }
 
 void move(){
