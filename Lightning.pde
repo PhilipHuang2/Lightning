@@ -21,25 +21,18 @@ void draw(){
   line(0,100,400,100);
   textSize(20);
   textAlign(LEFT);
-  text("Use the arrows key to move your character",0,340,400,400);
+  text("Use the arrows key to move your character up and down to avoid the lightning",0,310,400,400);
   line(0,300,400,300);
 
   stroke(0,153,76);
   strokeWeight(10);
   point(charX,charY);
   if(keyCode == UP) {
-      charY--;     
+      charY--;   
   }
   if(keyCode == DOWN) {
       charY++;     
   }  
-  if(keyCode == LEFT) {
-      charX--;     
-  }  
-  if(keyCode == RIGHT) {
-      charX++;     
-  }
-
 
   //Lightning
   stroke(12,125,200);
@@ -57,6 +50,7 @@ void draw(){
   line(startX,startY,endX,endY);
   startX = endX;
   startY = endY;
+  
   //reset lightning
   if(endX>400){
     startX = 0;
@@ -64,21 +58,13 @@ void draw(){
     endX = 5;
     size(400, 400);
     background(0);
-
     endY = 200;  
   }
 stroke(12,125,200);
-  // problem: for each line startY = end Y
 }
 
-void keyReleased() {
-  point(charX,charY);
-}
 
-void move(){
-  if (keyPressed){
-    
-  }
-}
+
+
 
 
