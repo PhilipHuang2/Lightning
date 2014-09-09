@@ -28,7 +28,7 @@ void draw(){
   strokeWeight(10);
   point(charX,charY);
   if(keyCode == UP) {
-      charY--;   
+    charY--;   
   }
   if(keyCode == DOWN) {
       charY++;     
